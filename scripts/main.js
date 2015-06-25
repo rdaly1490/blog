@@ -26,18 +26,12 @@ var App = Backbone.Router.extend({
 	},
 	login: function() {
 		React.render(
-			<div>
-				<h1>Login Page</h1>
-				<LoginPageComponent user={user} myRouter={myRouter} />
-			</div>,
+			<LoginPageComponent user={user} myRouter={myRouter} />,
 			document.getElementById("container"));
 	},
 	register: function() {
 		React.render(
-			<div>
-				<h1>Register Page</h1>
-				<RegisterPageComponent myRouter={myRouter} />
-			</div>,
+			<RegisterPageComponent myRouter={myRouter} />,
 			document.getElementById("container"));
 	},
 	home: function() {

@@ -36,23 +36,25 @@ module.exports = React.createClass({
 
 		var blogFeedHome = this.state.blogHistory.map(function(blogModel) {
 			return (
-				<div key={blogModel.cid}>
+				<div className="col-sm-8 col-sm-offset-2 well" key={blogModel.cid}>
 					<h3>{blogModel.get("title")}</h3>
 					<p>{blogModel.get("body")}</p>
 					<p> {blogModel.get("category")} </p>
 				</div>
 			);
 		});
-		
+
 		return (
-			<div>
-				<div>{welcome}</div>
-				<p>Welcome to the home page brah</p>
-				<p>Lorem ipsum Veniam quis nostrud id reprehenderit ex dolor do reprehenderit dolore in irure.</p>
-				<button onClick={this.logOut}>Log Out</button>
-				<p></p>
-				<button onClick={this.submitPost}>Submit Blog Post </button>
-				<div> {blogFeedHome} </div>
+			<div className="container-fluid">
+				<div className="col-sm-8 col-sm-offset-2 well welcome">
+					<h3>{welcome}</h3>
+					<p>Welcome to the home page brah</p>
+					<p>Lorem ipsum Veniam quis nostrud id reprehenderit ex dolor do reprehenderit dolore in irure.</p>
+					<button onClick={this.logOut}>Log Out</button>
+					<p></p>
+					<button onClick={this.submitPost}>Submit Blog Post </button>
+					<div> {blogFeedHome} </div>
+				</div>
 			</div>
 		);
 	},
